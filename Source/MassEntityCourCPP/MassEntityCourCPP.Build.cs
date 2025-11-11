@@ -7,36 +7,15 @@ public class MassEntityCourCPP : ModuleRules
 	public MassEntityCourCPP(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-		PublicDependencyModuleNames.AddRange(new string[] {
-			"Core",
-			"CoreUObject",
-			"Engine",
-			"InputCore",
-			"EnhancedInput",
-			"AIModule",
-			"GameplayStateTreeModule",
-			"UMG",
-			"Slate",
 
-            "HeadMountedDisplay",
-			"MassEntity",
-			"MassCommon",
-			"MassMovement",
-			"MassNavigation",
-			"MassAIBehavior",
-			"StateTreeModule",
-			"MassRepresentation",
-			"MassLOD",
-			"GameplayTags"
-    });
-
-
-        PrivateDependencyModuleNames.AddRange(new string[] { });
-
-        PublicIncludePaths.AddRange(new string[] {
-			"MassEntityCourCPP" 
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay",
+			"MassEntity", "MassCommon", "MassNavigation", "MassMovement", "NavigationSystem",
+			"AIModule", "MassAIBehavior", "StateTreeModule", "GameplayTags", "SmartObjectsModule", "MassSmartObjects", "MassSignals",
+			"MassRepresentation", "MassLOD", "AnimToTexture", "WorldResources"
 		});
-
-       
-    }
+		PrivateDependencyModuleNames.AddRange(new string[]
+		{
+			"GameplayTags"
+		});
+	}
 }

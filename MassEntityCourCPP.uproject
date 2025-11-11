@@ -9,30 +9,14 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine",
-				"AIModule",
-				"UMG"
+				"MassSpawner",
+				"Engine"
 			]
 		}
 	],
 	"Plugins": [
 		{
-			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
-		},
-		{
-			"Name": "StateTree",
-			"Enabled": true
-		},
-		{
-			"Name": "GameplayStateTree",
-			"Enabled": true
-		},
-		{
-			"Name": "MassAI",
+			"Name": "AnimToTexture",
 			"Enabled": true
 		},
 		{
@@ -40,7 +24,7 @@
 			"Enabled": true
 		},
 		{
-			"Name": "MassEntity",
+			"Name": "MassAI",
 			"Enabled": true
 		},
 		{
@@ -48,7 +32,31 @@
 			"Enabled": true
 		},
 		{
+			"Name": "MassWanderAI",
+			"Enabled": true
+		},
+		{
+			"Name": "BuildingManager",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayStateTree",
+			"Enabled": true
+		},
+		{
+			"Name": "StateTree",
+			"Enabled": true
+		},
+		{
 			"Name": "SmartObjects",
+			"Enabled": true
+		},
+		{
+			"Name": "PCG",
+			"Enabled": true
+		},
+		{
+			"Name": "RTSFormations",
 			"Enabled": true
 		}
 	]
