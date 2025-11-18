@@ -24,6 +24,7 @@ void UStateTreeMovementUpdateProcessor::ConfigureQueries(const TSharedRef<FMassE
 
 void UStateTreeMovementUpdateProcessor::Execute(FMassEntityManager& EntityManager, FMassExecutionContext& Context)
 {
+
 	EntityQuery.ForEachEntityChunk(Context, [this](FMassExecutionContext& Context)
 	{
 		auto& SignalSubsystem = Context.GetMutableSubsystemChecked<UMassSignalSubsystem>();
@@ -40,7 +41,7 @@ void UStateTreeMovementUpdateProcessor::Execute(FMassEntityManager& EntityManage
 			if (MassMoveTargetFragment.GetCurrentAction() == EMassMovementAction::Move)
 			{
 				auto Distance = FVector::Dist2D(TransformFragment.GetTransform().GetLocation(), MassMoveTargetFragment.Center);
-				if (Distance < 100.f)
+				if (Distance < MassMoveTargetFragment.SlackRadius)
 				{
 					SignalSubsystem.SignalEntityDeferred(Context, UE::Mass::Signals::StateTreeActivate, Context.GetEntity(EntityIdx));	
 				}
