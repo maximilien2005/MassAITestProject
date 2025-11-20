@@ -36,7 +36,8 @@ public class MassAITestProject : ModuleRules
 			"MassRepresentation",
 			"MassLOD",
 			"AnimToTexture",
-			"WorldResources"
+			"WorldResources",
+			"Kismet"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });

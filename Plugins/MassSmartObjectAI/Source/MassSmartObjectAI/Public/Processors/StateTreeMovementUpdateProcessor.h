@@ -6,9 +6,7 @@
 #include "MassProcessor.h"
 #include "StateTreeMovementUpdateProcessor.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class MASSSMARTOBJECTAI_API UStateTreeMovementUpdateProcessor : public UMassProcessor
 {
@@ -21,3 +19,4 @@ protected:
 
 	FMassEntityQuery EntityQuery;
 };
+
