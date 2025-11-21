@@ -50,7 +50,6 @@ EStateTreeRunStatus FMassSimpleMoveToTask::Tick(FStateTreeExecutionContext& Cont
 
 	MoveTarget.DistanceToGoal = FVector::Dist(MoveTarget.Center, CurrentLocation);
 	MoveTarget.Forward = (MoveTarget.Center - CurrentLocation).GetSafeNormal();
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, TEXT(MoveTarget.DistanceToGoal));
 	if (MoveTarget.DistanceToGoal <= InstanceData.AcceptableRadius)
 	{
 		MoveTarget.CreateNewAction(EMassMovementAction::Stand, *Context.GetWorld());
